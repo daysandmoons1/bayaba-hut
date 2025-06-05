@@ -1,0 +1,65 @@
+body {
+    background-image: url('/bayaba-hut/img/background.png') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+}
+
+body.dark {
+    background-image: url('/bayaba-hut/img/dark-background.png') !important;
+  }
+  
+.mc-title {
+    font-family: 'Press Start 2P', cursive !important;
+    text-align: center !important;
+    font-size: 2rem !important;
+    margin-top: 2rem !important;
+}
+
+.mc-title img {
+    width: 600px; /* 원하는 크기로 조정 */
+    height: auto;
+}
+
+.mc-center-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.mc-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 60px;
+}
+  
+.mc-button {
+    display: inline-block;
+    width: 300px;
+    height: 60px;
+    background-image: url('/bayaba-hut/img/button.png') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+}
+  
+.mc-button:hover {
+    filter: brightness(1.1);
+}
+  
+.mc-button::after {
+    content: attr(data-text);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

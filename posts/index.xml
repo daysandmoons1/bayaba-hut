@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on 바야바의 움집</title>
+    <link>https://daysandmoons1.github.io/bayaba-hut/posts/</link>
+    <description>Recent content in Posts on 바야바의 움집</description>
+    <generator>Hugo -- 0.147.7</generator>
+    <language>ko</language>
+    <lastBuildDate>Thu, 05 Jun 2025 21:30:00 +0900</lastBuildDate>
+    <atom:link href="https://daysandmoons1.github.io/bayaba-hut/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>첫 사냥 이야기</title>
+      <link>https://daysandmoons1.github.io/bayaba-hut/posts/%EC%83%9D%ED%99%9C/first-hunt/</link>
+      <pubDate>Thu, 05 Jun 2025 21:30:00 +0900</pubDate>
+      <guid>https://daysandmoons1.github.io/bayaba-hut/posts/%EC%83%9D%ED%99%9C/first-hunt/</guid>
+      <description>&lt;p&gt;오늘은 산에서 사슴을 만났다. 바야바의 첫 수렵이 성공했다!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>C&#43;&#43; 기초: 시작하기</title>
+      <link>https://daysandmoons1.github.io/bayaba-hut/posts/%EA%B8%B0%EC%88%A0/c&#43;&#43;/c&#43;&#43;-basics/</link>
+      <pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://daysandmoons1.github.io/bayaba-hut/posts/%EA%B8%B0%EC%88%A0/c&#43;&#43;/c&#43;&#43;-basics/</guid>
+      <description>&lt;h1 id=&#34;c-기초-시작하기&#34;&gt;C++ 기초: 시작하기&lt;/h1&gt;
+&lt;p&gt;C++는 강력하고 유연한 프로그래밍 언어로, 시스템 프로그래밍부터 게임 개발까지 다양한 분야에서 사용됩니다. 이 글에서는 C++의 기본 개념과 특징을 살펴보겠습니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

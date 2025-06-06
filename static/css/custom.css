@@ -71,7 +71,7 @@ body.dark {
   
 .mc-button {
     display: inline-block;
-    width: 400px;
+    width: clamp(240px, 40vw, 400px);
     height: 60px;
     background-image: url('/bayaba-hut/img/button.png') !important;
     background-size: 100% 100%;
@@ -95,6 +95,10 @@ body.dark {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    white-space: normal;
+    overflow-wrap: break-word;
+    text-align: center;
+    width: 90%;
 }
 
 .minecraft-container {
@@ -305,17 +309,18 @@ body.dark {
   }
   
   .mc-button.half::after {
-    content: attr(data-text);
-    font-family: 'Press Start 2P', cursive;
-    font-size: 12px;
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+      content: attr(data-text);
+      font-family: 'Press Start 2P', cursive;
+      font-size: 12px;
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      white-space: normal;
+      overflow-wrap: break-word;
+      text-align: center;
+      width: 90%;
   }
 
 .mc-button.small {
@@ -430,5 +435,10 @@ body.dark {
   .mc-menu {
     display: flex;
     flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .mc-button {
+    width: clamp(180px, 60vw, 100%);
   }
 }

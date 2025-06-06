@@ -1,0 +1,89 @@
+{{ define "main" }}
+<div class="mc-center-wrapper">
+    <h1 class="mc-title">
+        <img src="{{ "img/logo.png" | relURL }}" alt="Bayaba's Hut Logo" />
+    </h1>
+    <div class="mc-menu">
+        <a href="{{ printf "/bayaba-hut/%s/projects" (cond (eq .Site.Language.Lang "ko") "" .Site.Language.Lang) | relURL }}" class="mc-button" data-text="Crafting Room"></a>
+        <a href="{{ printf "/bayaba-hut/%s/dev-log" (cond (eq .Site.Language.Lang "ko") "" .Site.Language.Lang) | relURL }}" class="mc-button" data-text="Adventure Log"></a>
+        <a href="{{ printf "/bayaba-hut/%s/hunting-life" (cond (eq .Site.Language.Lang "ko") "" .Site.Language.Lang) | relURL }}" class="mc-button" data-text="Hunting Life"></a>
+
+        <!-- 병렬 버튼 및 좌우 정사각형 버튼 -->
+        <div class="row-buttons">
+            <a href="{{ printf "/bayaba-hut/%s" (cond (eq .Site.Language.Lang "ko") "en" "ko") | relURL }}" class="mc-button small" data-text="🌏"></a>
+            <a href="{{ printf "/bayaba-hut/%s/categories" (cond (eq .Site.Language.Lang "ko") "" .Site.Language.Lang) | relURL }}" class="mc-button half" data-text="Categories"></a>
+            <a href="{{ printf "/bayaba-hut/%s/tags" (cond (eq .Site.Language.Lang "ko") "" .Site.Language.Lang) | relURL }}" class="mc-button half" data-text="Tags"></a>
+            <a href="{{ printf "/bayaba-hut/%s/about" (cond (eq .Site.Language.Lang "ko") "" .Site.Language.Lang) | relURL }}" class="mc-button small" data-text="🧑‍🌾"></a>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="mc-divider">
+    <img src="{{ "/bayaba-hut/img/golden-apple.gif" | relURL }}" alt="Divider" />
+</div>
+
+<div class="minecraft-container">
+    <!-- 최근 글 -->
+    <div class="recent-posts">
+        <h2 class="minecraft-title">Recent Posts</h2>
+        <div class="post-cards">
+            {{ range first 4 .Site.RegularPages }}
+            <div class="post-card">
+                <div class="post-thumbnail-wrapper">
+                  <a href="{{ .RelPermalink }}">
+                      {{ if .Params.cover }}
+                      <img src="{{ .Params.cover.image }}" alt="{{ .Title }}" class="post-thumbnail">
+                      {{ else }}
+                      <img src="{{ "/bayaba-hut/img/icon.png" | relURL }}" alt="Default Cover" class="post-thumbnail">
+                      {{ end }}
+                  </a>
+                </div>
+                <div class="post-content">
+                    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                    <p><a href="{{ .RelPermalink }}">{{ .Summary | plainify | truncate 120 }}</a></p>
+                    <div class="post-meta">
+                        <span class="post-date">{{ .Date.Format "2006-01-02" }}</span>
+                        {{ range .Params.tags }}
+                        <span class="post-tag" role="link" onclick="event.stopImmediatePropagation(); location.href='/bayaba-hut/tags/{{ . }}'">{{ . }}</span>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+
+    <div class="mc-divider">
+        <img src="{{ "/bayaba-hut/img/golden-apple.gif" | relURL }}" alt="Divider" />
+    </div>
+
+    <!-- 인기 태그 -->
+    <div class="popular-tags">
+        <h2 class="minecraft-title">Popular Tags</h2>
+        <div class="tags-cloud">
+            {{ range first 3 .Site.Taxonomies.tags.ByCount }}
+            <a href="/bayaba-hut/tags/{{ .Name }}" class="minecraft-tag" style="font-size: calc(0.1em + {{ mul 0.1 .Count }}em);">
+                {{ .Name }} ({{ .Count }})
+            </a>
+            {{ end }}
+        </div>
+    </div>
+</div>
+
+<script>
+function search() {
+    const query = document.getElementById('search-input').value;
+    if (query) {
+        window.location.href = `/search?q=${encodeURIComponent(query)}`;
+    }
+}
+
+// Enter 키로 검색
+document.getElementById('search-input').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        search();
+    }
+});
+</script>
+{{ end }}

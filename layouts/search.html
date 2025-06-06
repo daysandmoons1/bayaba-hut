@@ -1,0 +1,67 @@
+{{ define "main" }}
+<div class="minecraft-container">
+    <h1 class="minecraft-title">Search Results</h1>
+    
+    <div class="search-container">
+        <input type="text" id="search-input" class="minecraft-input" placeholder="Search..." value="{{ .Params.query }}">
+        <button class="minecraft-button" onclick="search()">Search</button>
+    </div>
+
+    <div class="search-results">
+        {{ if .Params.query }}
+            {{ $query := .Params.query }}
+            {{ $results := where .Site.RegularPages "Title" "contains" $query }}
+            {{ $results = $results | union (where .Site.RegularPages "Content" "contains" $query) }}
+            
+            {{ if $results }}
+                <div class="posts-grid">
+                    {{ range $results }}
+                    <div class="post-card">
+                        {{ if .Params.cover }}
+                        <img src="{{ .Params.cover }}" alt="{{ .Title }}" class="post-thumbnail">
+                        {{ end }}
+                        <div class="post-content">
+                            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                            <p>{{ .Summary }}</p>
+                            <div class="post-meta">
+                                <span class="post-date">{{ .Date.Format "2006-01-02" }}</span>
+                                {{ range .Params.tags }}
+                                <a href="/tags/{{ . }}" class="tag">{{ . }}</a>
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            {{ else }}
+                <p class="no-results">No results found for "{{ .Params.query }}"</p>
+            {{ end }}
+        {{ end }}
+    </div>
+</div>
+
+<style>
+.no-results {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1em;
+    margin: 2rem 0;
+}
+</style>
+
+<script>
+function search() {
+    const query = document.getElementById('search-input').value;
+    if (query) {
+        window.location.href = `/search?q=${encodeURIComponent(query)}`;
+    }
+}
+
+// Enter 키로 검색
+document.getElementById('search-input').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        search();
+    }
+});
+</script>
+{{ end }} 

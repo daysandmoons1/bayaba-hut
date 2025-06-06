@@ -2,8 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://daysandmoons1.github.io/bayaba-hut/en/dev-log/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://daysandmoons1.github.io/bayaba-hut/dev-log/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://daysandmoons1.github.io/bayaba-hut/en/dev-log/"
+                />
+  </url><url>
     <loc>https://daysandmoons1.github.io/bayaba-hut/en/</loc>
-    <lastmod>2025-06-05T20:31:18+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -17,26 +30,6 @@
                 href="https://daysandmoons1.github.io/bayaba-hut/en/"
                 />
   </url><url>
-    <loc>https://daysandmoons1.github.io/bayaba-hut/en/posts/</loc>
-    <lastmod>2025-06-05T20:31:18+09:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://daysandmoons1.github.io/bayaba-hut/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://daysandmoons1.github.io/bayaba-hut/en/posts/"
-                />
-  </url><url>
-    <loc>https://daysandmoons1.github.io/bayaba-hut/en/posts/test-post/</loc>
-    <lastmod>2025-06-05T20:31:18+09:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://daysandmoons1.github.io/bayaba-hut/en/categories/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -49,6 +42,34 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://daysandmoons1.github.io/bayaba-hut/en/categories/"
+                />
+  </url><url>
+    <loc>https://daysandmoons1.github.io/bayaba-hut/en/projects/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://daysandmoons1.github.io/bayaba-hut/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://daysandmoons1.github.io/bayaba-hut/en/projects/"
+                />
+  </url><url>
+    <loc>https://daysandmoons1.github.io/bayaba-hut/en/hunting-life/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://daysandmoons1.github.io/bayaba-hut/hunting-life/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://daysandmoons1.github.io/bayaba-hut/en/hunting-life/"
                 />
   </url><url>
     <loc>https://daysandmoons1.github.io/bayaba-hut/en/tags/</loc>

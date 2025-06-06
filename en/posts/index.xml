@@ -2,18 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Bayaba&#39;s Hut</title>
-    <link>https://daysandmoons1.github.io/bayaba-hut/en/posts/</link>
+    <link>http://localhost:1313/bayaba-hut/en/posts/</link>
     <description>Recent content in Posts on Bayaba&#39;s Hut</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Jun 2025 20:31:18 +0900</lastBuildDate>
-    <atom:link href="https://daysandmoons1.github.io/bayaba-hut/en/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Test Post</title>
-      <link>https://daysandmoons1.github.io/bayaba-hut/en/posts/test-post/</link>
-      <pubDate>Thu, 05 Jun 2025 20:31:18 +0900</pubDate>
-      <guid>https://daysandmoons1.github.io/bayaba-hut/en/posts/test-post/</guid>
-      <description></description>
-    </item>
+    <atom:link href="http://localhost:1313/bayaba-hut/en/posts/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

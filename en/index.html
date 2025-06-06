@@ -139,11 +139,62 @@
         <img src="/bayaba-hut/img/logo.png" alt="Bayaba's Hut Logo" />
     </h1>
     <div class="mc-menu">
-        <a href="/bayaba-hut/en/posts" class="mc-button" data-text="Hunting Life"></a>
-        <a href="/bayaba-hut/en/categories" class="mc-button" data-text="Categories"></a>
-        <a href="/bayaba-hut/en/tags" class="mc-button" data-text="Tags"></a>
+        <a href="/bayaba-hut/en/projects" class="mc-button" data-text="Crafting Room"></a>
+        <a href="/bayaba-hut/en/dev-log" class="mc-button" data-text="Adventure Log"></a>
+        <a href="/bayaba-hut/en/hunting-life" class="mc-button" data-text="Hunting Life"></a>
+
+        
+        <div class="row-buttons">
+            <a href="/bayaba-hut/ko" class="mc-button small" data-text="🌏"></a>
+            <a href="/bayaba-hut/en/categories" class="mc-button half" data-text="Categories"></a>
+            <a href="/bayaba-hut/en/tags" class="mc-button half" data-text="Tags"></a>
+            <a href="/bayaba-hut/en/about" class="mc-button small" data-text="🧑‍🌾"></a>
+            </a>
+        </div>
     </div>
 </div>
+
+<div class="mc-divider">
+    <img src="/bayaba-hut/img/golden-apple.gif" alt="Divider" />
+</div>
+
+<div class="minecraft-container">
+    
+    <div class="recent-posts">
+        <h2 class="minecraft-title">Recent Posts</h2>
+        <div class="post-cards">
+            
+        </div>
+    </div>
+
+    <div class="mc-divider">
+        <img src="/bayaba-hut/img/golden-apple.gif" alt="Divider" />
+    </div>
+
+    
+    <div class="popular-tags">
+        <h2 class="minecraft-title">Popular Tags</h2>
+        <div class="tags-cloud">
+            
+        </div>
+    </div>
+</div>
+
+<script>
+function search() {
+    const query = document.getElementById('search-input').value;
+    if (query) {
+        window.location.href = `/search?q=${encodeURIComponent(query)}`;
+    }
+}
+
+
+document.getElementById('search-input').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        search();
+    }
+});
+</script>
 
     </main>
     
